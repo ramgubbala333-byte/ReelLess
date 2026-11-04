@@ -108,7 +108,7 @@ export default function BreakScreen() {
           <Text style={styles.doneLine}>Charge restored. The count is still there when you get back.</Text>
         ) : null}
         <Pressable style={styles.exit} onPress={() => router.back()}>
-          <Text style={styles.exitText}>{done ? 'Back to ReelLess' : 'End break early'}</Text>
+          <Text style={styles.exitText}>{done ? 'Back to ScrollTally' : 'End break early'}</Text>
         </Pressable>
       </View>
     </SafeAreaView>

@@ -22,6 +22,7 @@ import ReAnimated, {
 } from 'react-native-reanimated';
 
 import Glyph from '@/components/Glyph';
+import PlatformIcon from '@/components/PlatformIcon';
 import { EASE_OUT, useOnChange } from '@/components/motion';
 import { ReelScene, sceneForCard } from '@/components/Scene';
 import { ReelCard, buildReelDeck } from '@/data';
@@ -243,13 +244,11 @@ function ReelSlide({
       <View style={styles.slideBottom}>
         <View style={{ flex: 1 }}>
           <View style={styles.handleRow}>
-            <View style={[styles.pMark, { backgroundColor: platform?.color ?? colors.amber }]}>
-              <Text style={styles.pMarkText}>{platform?.short}</Text>
-            </View>
+            <PlatformIcon id={card.platform} size={26} />
             <Text style={styles.handle}>{card.handle}</Text>
           </View>
           <Text style={styles.caption}>{card.caption}</Text>
-          <Text style={styles.platformLine}>{platform?.label} · counted by ReelLess</Text>
+          <Text style={styles.platformLine}>{platform?.label} · counted by ScrollTally</Text>
         </View>
         <View style={styles.rail}>
           <Pressable onPress={onLike} style={styles.railItem}>
@@ -373,8 +372,6 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 22,
   },
   handleRow: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 7 },
-  pMark: { width: 26, height: 26, borderRadius: 8, alignItems: 'center', justifyContent: 'center' },
-  pMarkText: { fontFamily: fonts.bodyBlack, fontSize: 9.5, color: colors.black },
   handle: { fontFamily: fonts.bodyBlack, fontSize: 15.5, color: colors.cream },
   caption: { fontFamily: fonts.body, fontSize: 14.5, color: colors.creamDim, lineHeight: 20 },
   platformLine: { fontFamily: fonts.bodySemi, fontSize: 11.5, color: colors.muted, marginTop: 7 },

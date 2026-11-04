@@ -1,7 +1,7 @@
 import Svg, { Circle, Ellipse, G, Path, Rect } from 'react-native-svg';
 
 /**
- * Original code-drawn scenery for ReelLess: matte layered silhouettes in
+ * Original code-drawn scenery for ScrollTally: matte layered silhouettes in
  * the navy game palette. No image assets. The hub scene is a jungle hollow
  * with a teal-lit cave portal; feed scenes are simple location plates
  * (waterfall, jungle, mountains, ocean, cave, peaks) behind each reel.

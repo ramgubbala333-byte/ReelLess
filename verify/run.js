@@ -1,4 +1,4 @@
-// ReelLess interaction verification (Expo Go gate #3).
+// ScrollTally interaction verification (Expo Go gate #3).
 // Drives the static web export in headless Chrome at 390px with real
 // mouse clicks: 4-step onboarding, all five tabs, feed counting via the
 // Next-reel button, the goal-crossing modal, the break cooldown, the
@@ -186,7 +186,7 @@ async function shot(page, name) {
     await shot(page, '12-duel');
     await clickText(page, 'Challenge a friend');
     check('duel share sheet opens', await hasText(page, 'Your duel link'));
-    check('duel link shown', await hasText(page, 'reelless.app/duel/volt-4821'));
+    check('duel link shown', await hasText(page, 'scrolltally.app/duel/volt-4821'));
     await shot(page, '13-duel-sheet');
     await clickText(page, 'Close');
     await sleep(500);
@@ -209,7 +209,7 @@ async function shot(page, name) {
     }
     await clickText(page, 'See what PRO adds');
     await sleep(800);
-    check('paywall renders', await hasText(page, 'ReelLess PRO', 5000) || (await hasText(page, 'PRO', 3000)));
+    check('paywall renders', await hasText(page, 'ScrollTally PRO', 5000) || (await hasText(page, 'PRO', 3000)));
     await shot(page, '15-paywall');
   } catch (e) {
     check(`harness completed without exception (${e.message})`, false);

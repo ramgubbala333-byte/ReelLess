@@ -5,6 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import ReAnimated, { FadeInRight } from 'react-native-reanimated';
 
 import Glyph from '@/components/Glyph';
+import PlatformIcon from '@/components/PlatformIcon';
 import { HubScene } from '@/components/Scene';
 import Volt from '@/components/Volt';
 import { useStore } from '@/store/useStore';
@@ -56,10 +57,10 @@ export default function Onboarding() {
                   <Volt count={25} goal={100} size={132} />
                 </View>
               </View>
-              <Text style={styles.kicker}>REELESS</Text>
+              <Text style={styles.kicker}>SCROLLTALLY</Text>
               <Text style={styles.title}>Every reel, counted.</Text>
               <Text style={styles.copy}>
-                ReelLess counts each short video you watch, across Instagram, YouTube, Facebook and
+                ScrollTally counts each short video you watch, across Instagram, YouTube, Facebook and
                 Snapchat, and shows the number while you scroll. No guessing, no vague screen-time
                 averages. A number.
               </Text>
@@ -86,9 +87,7 @@ export default function Onboarding() {
                       onPress={() => toggle(p.id)}
                       style={[styles.platformRow, on && styles.platformRowOn]}
                     >
-                      <View style={[styles.pMark, { backgroundColor: p.color }]}>
-                        <Text style={styles.pMarkText}>{p.short}</Text>
-                      </View>
+                      <PlatformIcon id={p.id} size={36} />
                       <Text style={styles.pLabel}>{p.label}</Text>
                       {on ? <Glyph name="check" size={20} color={colors.amber} /> : null}
                     </Pressable>
@@ -217,8 +216,6 @@ const styles = StyleSheet.create({
     padding: 14,
   },
   platformRowOn: { borderColor: colors.amber, backgroundColor: colors.panelAlt },
-  pMark: { width: 36, height: 36, borderRadius: 10, alignItems: 'center', justifyContent: 'center' },
-  pMarkText: { fontFamily: fonts.bodyBlack, fontSize: 12, color: colors.black },
   pLabel: { fontFamily: fonts.bodyBold, fontSize: 16, color: colors.cream, flex: 1 },
   goalNumber: { fontFamily: fonts.display, fontSize: 84, color: colors.cream, textAlign: 'center', marginTop: 18 },
   goalUnit: { fontFamily: fonts.bodySemi, fontSize: 14, color: colors.muted, textAlign: 'center' },

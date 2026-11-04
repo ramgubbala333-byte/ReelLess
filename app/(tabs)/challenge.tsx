@@ -21,7 +21,7 @@ import { selectToday, useStore } from '@/store/useStore';
 import { colors, fonts, cardShadow } from '@/theme';
 import { todayKey } from '@/utils';
 
-const CHALLENGE_LINK = 'reelless.app/duel/volt-4821';
+const CHALLENGE_LINK = 'scrolltally.app/duel/volt-4821';
 
 export default function Challenge() {
   const today = useStore(selectToday);
@@ -49,7 +49,7 @@ export default function Challenge() {
   const share = async () => {
     try {
       await Share.share({
-        message: `Duel me on ReelLess. Fewer reels today wins. I am at ${today.total}. Join: ${CHALLENGE_LINK}`,
+        message: `Duel me on ScrollTally. Fewer reels today wins. I am at ${today.total}. Join: ${CHALLENGE_LINK}`,
       });
     } catch {
       // share dismissed

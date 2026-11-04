@@ -1,6 +1,6 @@
-# ReelLess
+# ScrollTally
 
-Count every reel. ReelLess counts each short video you watch and shows the number while you
+Count every reel. ScrollTally counts each short video you watch and shows the number while you
 scroll, with a daily goal, a battery mascot (Volt) that drains as you scroll, stats, and a
 daily fewer-reels-wins duel with friends.
 

@@ -57,7 +57,7 @@ export default function Today() {
     <SafeAreaView style={styles.safe} edges={['top']}>
       <ScrollView contentContainerStyle={styles.body}>
         <View style={styles.headRow}>
-          <Text style={styles.kicker}>REELESS</Text>
+          <Text style={styles.kicker}>SCROLLTALLY</Text>
           <Text style={styles.headSub}>Adventure hub · Today</Text>
         </View>
 

@@ -18,7 +18,7 @@ export default function Paywall() {
   return (
     <SafeAreaView style={styles.safe}>
       <ScrollView contentContainerStyle={styles.body}>
-        <Text style={styles.kicker}>REELESS PRO</Text>
+        <Text style={styles.kicker}>SCROLLTALLY PRO</Text>
         <Text style={styles.title}>More charge, kept honest.</Text>
         <Text style={styles.copy}>
           PRO is planned for the native build. In v1 the paywall is off and every feature in this
@@ -42,7 +42,7 @@ export default function Paywall() {
         <View style={styles.promise}>
           <Text style={styles.promiseTitle}>The grandfathering promise</Text>
           <Text style={styles.promiseBody}>
-            Anyone using ReelLess before PRO launches keeps the full counting, stats and duel
+            Anyone using ScrollTally before PRO launches keeps the full counting, stats and duel
             features free, forever. If pricing ever ships, it will be a single lifetime option
             first, not a weekly trap.
           </Text>

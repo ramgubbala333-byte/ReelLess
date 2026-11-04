@@ -2,7 +2,7 @@ import { DayRecord } from './types';
 import { dateKey, daysAgoKey } from './utils';
 
 /**
- * Game progression for ReelLess, derived ONLY from the stored history and
+ * Game progression for ScrollTally, derived ONLY from the stored history and
  * the current goal. Nothing here invents data:
  *
  * - A "quest" is a past day (strictly before today) that exists in history

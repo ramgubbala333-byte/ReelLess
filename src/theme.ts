@@ -1,5 +1,5 @@
 /**
- * ReelLess visual system: a dark navy game shell in the Adventure Game
+ * ScrollTally visual system: a dark navy game shell in the Adventure Game
  * direction (deep navy world, chunky rounded panels, warm orange actions),
  * with Volt the battery as the hero. Original palette mapping, no assets
  * or layouts taken from any reference design.

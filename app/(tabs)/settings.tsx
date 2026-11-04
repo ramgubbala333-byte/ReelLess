@@ -5,6 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import ReAnimated, { FadeInUp } from 'react-native-reanimated';
 
 import Glyph from '@/components/Glyph';
+import PlatformIcon from '@/components/PlatformIcon';
 import Volt from '@/components/Volt';
 import { selectToday, useStore } from '@/store/useStore';
 import { PLATFORMS } from '@/types';
@@ -70,9 +71,7 @@ export default function Settings() {
         <View style={styles.card}>
           {PLATFORMS.map((p, i) => (
             <View key={p.id} style={[styles.toggleRow, i > 0 && styles.toggleBorder]}>
-              <View style={[styles.pMark, { backgroundColor: p.color }]}>
-                <Text style={styles.pMarkText}>{p.short}</Text>
-              </View>
+              <PlatformIcon id={p.id} size={32} />
               <Text style={styles.toggleLabel}>{p.label}</Text>
               <Switch
                 value={platforms[p.id]}
@@ -88,7 +87,7 @@ export default function Settings() {
         <View style={styles.widgetCard}>
           <View style={styles.widgetHead}>
             <Glyph name="bolt" size={15} color={colors.amber} />
-            <Text style={styles.widgetApp}>REELESS</Text>
+            <Text style={styles.widgetApp}>SCROLLTALLY</Text>
           </View>
           <View style={styles.widgetRow}>
             <Text style={styles.widgetCount}>{today.total}</Text>
@@ -105,7 +104,7 @@ export default function Settings() {
           </Text>
         </View>
 
-        <Text style={styles.sectionTitle}>ReelLess PRO</Text>
+        <Text style={styles.sectionTitle}>ScrollTally PRO</Text>
         <Pressable style={styles.proCard} onPress={() => router.push('/paywall')}>
           <View style={{ flex: 1 }}>
             <Text style={styles.proTitle}>See what PRO adds</Text>
@@ -129,7 +128,7 @@ export default function Settings() {
         <Text style={styles.sectionTitle}>About this build</Text>
         <View style={styles.card}>
           <Text style={styles.aboutText}>
-            ReelLess v1 runs on a demo counting adapter. The Reels feed inside the app is
+            ScrollTally v1 runs on a demo counting adapter. The Reels feed inside the app is
             simulated, and each reel you land on is counted for real. Past days are seeded demo
             history, regenerated if you reset.
           </Text>
@@ -165,8 +164,6 @@ const styles = StyleSheet.create({
   cardNote: { fontFamily: fonts.body, fontSize: 12, color: colors.muted, lineHeight: 17, marginTop: 12 },
   toggleRow: { flexDirection: 'row', alignItems: 'center', gap: 11, paddingVertical: 9 },
   toggleBorder: { borderTopColor: colors.line, borderTopWidth: 1 },
-  pMark: { width: 32, height: 32, borderRadius: 10, alignItems: 'center', justifyContent: 'center' },
-  pMarkText: { fontFamily: fonts.bodyBlack, fontSize: 11, color: colors.black },
   toggleLabel: { fontFamily: fonts.bodySemi, fontSize: 15, color: colors.cream, flex: 1 },
   widgetCard: { backgroundColor: colors.bgDeep, borderColor: colors.line, borderWidth: 1, borderRadius: 24, padding: 16 },
   widgetHead: { flexDirection: 'row', alignItems: 'center', gap: 6 },

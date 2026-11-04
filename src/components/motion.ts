@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Animated, Easing } from 'react-native';
 
 /**
- * Shared motion helpers for ReelLess. Everything runs on the JS driver:
+ * Shared motion helpers for ScrollTally. Everything runs on the JS driver:
  * these are tiny mascot/counter feedback animations, and JS timing keeps
  * web (verification harness) free of native-driver warnings.
  */

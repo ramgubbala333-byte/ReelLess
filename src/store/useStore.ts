@@ -83,7 +83,7 @@ export const useStore = create<ReelLessState>()(
         const s = get();
         return JSON.stringify(
           {
-            app: 'ReelLess',
+            app: 'ScrollTally',
             exportedAt: new Date().toISOString(),
             goal: s.goal,
             platforms: s.platforms,
